@@ -17,20 +17,20 @@ const calcularChurrasco = () => {
 
     // Soma da quantidade de pessoas
     const totalPessoas = Number(mulheres) + Number(homens) + Number(criancas)
-    
+
     // 50g de acompanhamento por pessoa
     const totalAcompanhamento = acompanhamentos ? 50 * Number(totalPessoas) : 0
-    
+
     // 400ml de bebida nao alcoolica para cada pessoa
     const totalBebidasNaoAlcoolicas = bebidasNaoAlcoolicas ? 500 * Number(bebidasNaoAlcoolicas) : 0
-    
+
     // 500ml de bebida alcoolica para cada pessoa :'D
     const totalBebidasAlcoolicas = bebidasAlcoolicas ? 500 * Number(bebidasAlcoolicas) : 0
 
-    
+
 
     document.getElementById("total-carne").innerHTML = `${getValueMeasure(totalCarne, 1)}`
-    document.getElementById("total-pessoas").innerHTML = `${totalPessoas} pessoas`
+    document.getElementById("total-pessoas").innerHTML = `${totalPessoas}`
     document.getElementById("total-acompanhamento").innerHTML = `${getValueMeasure(totalAcompanhamento, 1)}`
     document.getElementById("total-bebidas-nao-alcoolicas").innerHTML = `${getValueMeasure(totalBebidasNaoAlcoolicas, 2)}`
     document.getElementById("total-bebidas-alcoolicas").innerHTML = `${getValueMeasure(totalBebidasAlcoolicas, 2)}`

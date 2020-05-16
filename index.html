@@ -1,59 +1,100 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" type="text/css" href="./src/main.css" />
-    <title>Gama Academy - Calculadora de churrasco</title>
-  </head>
-  <body>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" type="text/css" href="./src/main.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
+  <link href="//db.onlinewebfonts.com/c/23be6197029ed49537884d28c0ba4c10?family=Apple+Braille" rel="stylesheet" type="text/css" />
+  <title>Gama Academy - Calculadora de churrasco</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+</head>
+
+<body>
+  <div class="container text-center">
     <header>
-      <h5>GAMA ACADEMY</h5>
-      <h2>Calculadora de Churrasco</h2>
-    </header>
-
-    <div>
-      <label for="mulheres-qnt">Mulheres</label>
-      <input id="mulheres-qnt" type="text" />
-
-      <label for="homens-qnt">Homens</label>
-      <input id="homens-qnt" type="text" />
-
-      <label for="criancas-qnt">Crianças</label>
-      <input id="criancas-qnt" type="text" />
-      <br>
-      <label for="acompanhamentos">acompanhamentos</label>
-      <input id="acompanhamentos" type="checkbox" />
-    </div>
-    <div>
-      <label for="bebidas-alcoolicas">Bebidas alcoolicas</label>
-      <input id="bebidas-alcoolicas" type="text" />
-
-      <label for="bebidas-nao-alcoolicas">Bebidas não alcoolicas</label>
-      <input id="bebidas-nao-alcoolicas" type="text" />
-    </div>
-    <br>
-    <button id="botaoCalcular">Calcular</button>
-
-      <div>
-        <div>
-          <label for="total-carne" id="total-carne"></label>
-        </div>
-        <div>
-          <label for="total-pessoas" id="total-pessoas"></label>
-        </div>
-        <div>
-          <label for="total-acompanhamento" id="total-acompanhamento"></label>
-        </div>
-        <div>
-          <label for="total-bebidas-nao-alcoolicas" id="total-bebidas-nao-alcoolicas"></label>
-        </div>
-        <div>
-          <label for="total-bebidas-alcoolicas" id="total-bebidas-alcoolicas"></label>
-        </div>
-        <div>
+      <h5 class="gama-title">GAMA ACADEMY</h5>
+      <h1 class="title-calc">Calculadora de Churrasco</h1>
+    </header><br><br>
+    <div class="row">
+      <div class="col second-title">
+        Comidas
+      </div>
+      <div class="col">
+        <input id="mulheres-qnt" class="form-control text-center" type="text" style="display:table-cell" />
+        <label class="labels" for="mulheres-qnt">Mulheres</label>
+      </div>
+      <div class="col">
+        <input id="homens-qnt" class="form-control text-center" type="text" />
+        <label class="labels" for="homens-qnt">Homens</label>
+      </div>
+      <div class="col">
+        <input id="criancas-qnt" class="form-control text-center" type="text" />
+        <label class="labels" for="criancas-qnt">Crianças</label>
       </div>
     </div>
-    <script src="./src/main.js"></script>
-  </body>
+    <div class="row">
+      <div class="col">
+      </div>
+      <div class="col text-left ">
+        <label class="custom-checkbox">
+          <span class="labels" for="acompanhamentos" style="font-size: 14px; margin-bottom: 5px">Acompanhamentos</span>
+          <input type="checkbox" checked="checked" id="acompanhamentos">
+          <span class="checkmark"></span>
+        </label>
+      </div>
+      <div class="col">
+      </div>
+      <div class="col">
+      </div>
+    </div>
+    <br>
+
+
+
+    <div class="row">
+      <div class="col second-title">
+        Bebidas
+      </div>
+      <div class="col">
+          <input id="bebidas-alcoolicas" class="form-control text-center" type="text" />
+          <label class="labels" for="bebidas-alcoolicas">Quantos bebem cerveja?</label>
+      </div>
+      <div class="col">
+        <input id="bebidas-nao-alcoolicas" class="form-control text-center" type="text" />
+        <label class="labels" for="bebidas-nao-alcoolicas">Quantos bebem refrigerante?</label>
+      </div>
+      <div class="col">
+
+      </div>
+    </div>
+    <br>
+
+    <div class="text-center">
+      <button class="btn button-calc" id="botaoCalcular">Calcular</button>
+    </div>
+
+
+    <div class="" style="padding: 40px;">
+      <div class="row results">
+        <div class="col results-text text-left" style="margin-top:5px; margin-bottom: 5px">
+          <b>Total de Pessoas: <label class="" for="total-pessoas" id="total-pessoas"></label></b> <br>
+          <b>Total de Carne: <label class="" for="total-carne" id="total-carne"></label></b> <br>
+          <b>Acompanhamento: <label class="" for="total-acompanhamento" id="total-acompanhamento"></label></b>
+        </div>
+        <div class="col results-text text-left" style="margin-top:5px;">
+          <b>Bebidas alcoólicas: <label class="" for="total-bebidas-alcoolicas" id="total-bebidas-alcoolicas"></label></b><br>
+          <b>Bebidas não alcoólicas: <label class="" for="total-bebidas-nao-alcoolicas" id="total-bebidas-nao-alcoolicas"></b></label>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="./src/main.js"></script>
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+</body>
+
 </html>
